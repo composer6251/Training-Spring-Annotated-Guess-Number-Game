@@ -18,6 +18,8 @@ public class GameImpl implements Game{
     // == fields ==
     @Autowired
     private NumberGenerator numberGenerator;
+
+    @Autowired
     private int guessCount = 10;
     private int number;
     private int guess;
@@ -89,6 +91,10 @@ public class GameImpl implements Game{
         return remainingGuesses;
     }
 
+    @Override
+    public int getGuessCount() {
+        return guessCount;
+    }
 
     @Override
     public void check() {
